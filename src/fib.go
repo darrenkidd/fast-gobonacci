@@ -17,7 +17,6 @@ func fib(pos int, num string) {
 func main() {
 	seq := os.Args[1:]
 	for i := 0; i < len(seq); i++ {
-		go fib(i+1, seq[i])
+		fib(i+1, seq[i])
 	}
-	fmt.Scanln()
 }

@@ -17,8 +17,9 @@ user    2m34.083s
 sys     0m1.178s
 ```
 
-### latest
+### `ec2fcf5`
 
+```bash
 $ go build fib.go && time ./fib 42 51 19 27 30      
 [5] fib(30) --> 1346269
 [3] fib(19) --> 6765
@@ -30,6 +31,22 @@ $ go build fib.go && time ./fib 42 51 19 27 30
 real    2m20.442s
 user    2m19.272s
 sys     0m0.510s
+```
+
+### latest
+
+```bash
+$ go build fib.go && time ./fib 42 51 19 27 30
+[1] fib(42) --> 433494437
+[2] fib(51) --> 32951280099
+[3] fib(19) --> 6765
+[4] fib(27) --> 317811
+[5] fib(30) --> 1346269
+
+real    0m0.029s
+user    0m0.002s
+sys     0m0.004s
+```
 
 ## Old Way
 
