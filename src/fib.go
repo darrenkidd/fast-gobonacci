@@ -7,10 +7,16 @@ import (
 	"strconv"
 )
 
+func fib(pos int, num string) {
+	if n, err := strconv.ParseInt(num, 10, 0); err == nil {
+		fibOfN := fibonacci.CalcFib(n)
+		fmt.Printf("[%d] fib(%d) --> %d\n", pos, n, fibOfN)
+	}
+}
+
 func main() {
-	clas := os.Args[1:]
-	if i, err := strconv.ParseInt(clas[0], 10, 0); err == nil {
-		fib := fibonacci.CalcFib(i)
-		fmt.Printf("%d\n", fib)
+	seq := os.Args[1:]
+	for i := 0; i < len(seq); i++ {
+		fib(i+1, seq[i])
 	}
 }
