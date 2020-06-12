@@ -1,5 +1,7 @@
 ## New Way
 
+### `bdafd8d`
+
 No fancy stuff; just run everything sequentially:
 
 ```bash
@@ -14,6 +16,20 @@ real    2m36.423s
 user    2m34.083s
 sys     0m1.178s
 ```
+
+### latest
+
+$ go build fib.go && time ./fib 42 51 19 27 30      
+[5] fib(30) --> 1346269
+[3] fib(19) --> 6765
+[4] fib(27) --> 317811
+[1] fib(42) --> 433494437
+[2] fib(51) --> 32951280099
+
+
+real    2m20.442s
+user    2m19.272s
+sys     0m0.510s
 
 ## Old Way
 
